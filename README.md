@@ -1,1 +1,2 @@
 # deli-cious-store
+This project is built using Object-Oriented Programming (OOP) principles. It is a console-based application for a sandwich shop that demonstrates the use of interfaces, inheritance, and abstract classes. The application allows users to customize their sandwich by selecting the type of bread, size, toppings, drinks, and sides. At the end of the process, it calculates and displays the total price. This program can be especially useful for new or growing food businesses that need a simple, customizable ordering system.
