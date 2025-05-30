@@ -1,0 +1,13 @@
+Date: 20250529-061858
+===== Order Details =====
+Sandwich 8" on w bread (Toasted)
+Toppings: 
+- ham
+- american
+Total: $7.0
+
+Drink: coke - $7.5
+Chips:  - $1.5
+-----------------------------
+
+your total is: $15.7

@@ -1,0 +1,12 @@
+Date: 20250529-062829
+===== Order Details =====
+Sandwich 4" on white bread (Toasted)
+Toppings: 
+- ham
+- american
+Total: $5.5
+
+Drink: coke - $7.5
+-----------------------------
+
+your total is: $9.75

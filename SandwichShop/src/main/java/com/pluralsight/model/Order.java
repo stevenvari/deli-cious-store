@@ -9,45 +9,50 @@ public class Order {
     private List<Drink> drinks = new ArrayList<>();
     private List<Chips> chips = new ArrayList<>();
 
-    public void addSandwich(Sandwich sandwich){
+    public Order() {
+        this.sandwiches = new ArrayList<>();
+        this.drinks = new ArrayList<>();
+        this.chips = new ArrayList<>();
+    }
+
+    public void addSandwich(Sandwich sandwich) {
         sandwiches.add(sandwich);
     }
 
-    public void addDrink(Drink drink){
+    public void addDrink(Drink drink) {
         drinks.add(drink);
     }
 
-    public void addChips(Chips chips1){
+    public void addChips(Chips chips1) {
         chips.add(chips1);
     }
 
-    public double getTotal(){
-        double total = 0;
-        for (Sandwich sandwich : sandwiches){
-            total += sandwich.getPrice();
-        }
-        for (Drink drink : drinks){
-            total += drink.getPrice();
-        }
-        for (Chips chips1 : chips){
-            total += chips1.getPrice();
-        }
-        return total;
-    }
-
-    public void showOrder(){
+    public String showOrder() {
+        StringBuilder builder = new StringBuilder();
 
         System.out.println("===== Order Details =====");
-        for (Sandwich sandwich : sandwiches){
-            sandwich.showDetails();
+        builder.append("===== Order Details =====" + "\n");
+        for (Sandwich sandwich : sandwiches) {
+            String messageSandwich = sandwich.showDetails();
+            builder.append(messageSandwich + "\n");
         }
-        for (Drink drink : drinks){
-            System.out.println("Drink: " + drink.getName() + " - $" + drink.getPrice());
+        for (Drink drink : drinks) {
+            System.out.println("Drink: " + drink.getFlavor() + " - $" + drink.getPrice());
+            builder.append("Drink: " + drink.getFlavor() + " - $" + drink.getPrice() + "\n");
         }
-        for (Chips chips1 : chips){
-            System.out.println("Chips: " + chips1.getName() + " - $" + chips1.getPrice());
+        for (Chips chips1 : chips) {
+            System.out.println("Chips: " + " - $" + chips1.getPrice("no"));
+            builder.append("Chips: " + " - $" + chips1.getPrice("no") + "\n");
         }
         System.out.println("-----------------------------");
-        System.out.println("Total Order: $" + getTotal());
+        builder.append("-----------------------------" + "\n");
+
+        return builder.toString();
+    }
+
+    public void cleanList() {
+        this.sandwiches = new ArrayList<>();
+        this.drinks = new ArrayList<>();
+        this.chips = new ArrayList<>();
     }
 }
